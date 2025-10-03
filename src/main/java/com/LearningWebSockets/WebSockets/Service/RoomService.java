@@ -16,7 +16,7 @@ import java.util.List;
 @Slf4j
 @RequiredArgsConstructor
 public class RoomService {
-    private RoomRepository roomRepository;
+    private final RoomRepository roomRepository;
 
     public void saveRoom(Room room){
         roomRepository.save(room);
