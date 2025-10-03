@@ -18,6 +18,9 @@ import java.util.List;
 public class RoomService {
     private RoomRepository roomRepository;
 
+    public void saveRoom(Room room){
+        roomRepository.save(room);
+    }
     public ResponseEntity<?> createRoom(String roomId){
         if(roomRepository.findByRoomId(roomId) != null){
             return ResponseEntity.badRequest().body("Room already exists");
